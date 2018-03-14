@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Ülesanne2
+#
+echo "Tarvo Raba" # väljastab reavahetusega minu nime
+echo "ISP217" # väljastab reavahetusega õppegrupi
+echo "Huvitav" # väljastab reavahetusega minu arvamuse ainest
+echo "Nii ja naa" # väljastab reavahetusega minu mulje ja edasijõudmise
+#
+# skripti lõpp
