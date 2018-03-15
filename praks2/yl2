@@ -1,10 +1,12 @@
 #!/bin/bash
 #
-# Ülesanne2
+#  kasutajate nimekiri kujul Perenimi, Eesnimi
 #
-echo "Tarvo Raba" # väljastab reavahetusega minu nime
-echo "ISP217" # väljastab reavahetusega õppegrupi
-echo "Huvitav" # väljastab reavahetusega minu arvamuse ainest
-echo "Nii ja naa" # väljastab reavahetusega minu mulje ja edasijõudmise
+# skripti algus
+#
+who | cut -f1 -d" " | cut -f2 -d"." > perenimi # lõikame perenime - see on 2. element peale punkti ja salvestame faili
+who | cut -f1 -d" " | cut -f1 -d"." > eesnimi # lõikame eesnime - see on 1. element enne punkti ja salvestame faili
+paste -d"." perenimi eesnimi > nimed # kleebime need failid vastavas järjekorras kokku
+cat nimed | sort | uniq # sorteerimine väljund ja võtame korduvad välja
 #
 # skripti lõpp
