@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+#.log lõpuga failid
+#
+echo "`sudo find /var/log/*.log -type f -exec wc -l {} + | sort -rn`"
+#
+#skripti lõpp
+
