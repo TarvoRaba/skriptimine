@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+#Masina tööaeg
+#
+echo `hostname` `uptime -p`
