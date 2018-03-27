@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#ekskursioon
+#
+#Skript algab
+echo -n "Siia sisestage reisijate arv: "
+read reisijad
+echo -n "Siia sisestage bussis olevate kohtade arv: "
+read istekohad
+# Busse läheb vaja
+busside_arv=`expr $reisijad / $istekohad`
+echo "Busse on vaja: $busside_arv"
+# Mitu inimest maha jääb
+maha=`expr $reisijad % $istekohad`
+echo "Maha jääb inimesi: $maha"
+#
+echo "Täis saadakse $busside_arv bussi ja maha jääb $maha inimest"
+#
+#skripti lõpp
