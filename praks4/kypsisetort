@@ -1,0 +1,46 @@
+#!/bin/bash
+#
+# Küpsisetort
+# 
+# skripti algus
+#
+echo -n "Sisesta siia aluskandiku pikkus cm-tes: "
+read pikkus
+echo "Pikkus on $pikkus"
+echo -n "Sisesta siia aluskandiku laius cm-tes: "
+read laius
+echo "Laius on $laius"
+pindala=`expr $pikkus \* $laius`
+echo "Aluskandiku pindala on $pindala"
+#
+echo -n "Sisesta siia kypsiste pikkus cm-tes: "
+read kypsiste_pikkus
+echo "Kypsiste pikkus on $kypsiste_pikkus"
+echo "Sisesta siia kypsiste laius cm-tes: "
+read kypsiste_laius
+echo "Kypsiste laius on $kypsiste_laius"
+kypsise_pindala=`expr $kypsiste_pikkus \* $kypsiste_laius`
+echo "Kypsiste pindala on $kypsise_pindala"
+#
+echo -n "Sisesta siia kihtide kogus: "
+read kihtide_kogus
+echo "Kihtide kogus on $kihtide_kogus"
+#
+echo -n "Sisesta kypsiste kogus: "
+read kypsiste_kogus
+echo "Kypsiste kogus ühes pakis on $kypsiste_kogus"
+#Mitu küpsist läheb ühele kihile
+kiht=`expr $pindala / $kypsise_pindala`
+echo $kiht
+#Terve tordi peale
+tort=`expr $kiht \* $kihtide_kogus`
+
+echo "Küpsiseid läheb terve tordi peale $tort"
+#Pakkide arv
+pakk_arv=`expr $tort / $kypsiste_kogus`
+#
+#jääk
+jaak=`expr $tort % $kypsiste_kogus`
+echo "J22k on $jaak"
+#
+#Skripti lõpp
